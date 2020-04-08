@@ -160,6 +160,7 @@ const data = [
     articleContainer.classList.add('article')
     articleDate.classList.add('date')
     mainButtonSpan.classList.add('expandButton')
+    
 
     articleHeader.textContent = object.title
     articleDate.textContent = object.date
@@ -167,7 +168,7 @@ const data = [
     articleParaTwo.textContent = object.secondParagraph
     articleParaThree.textContent = object.thirdParagraph
 
-    mainButtonSpan.textContent = '\u25bc';
+    mainButtonSpan.textContent = 'Click to Expand';
 
     /*
   Step 2: Add an event listener to the expandButton span. This event listener should toggle the class 'article-open' on the 'article' div.
@@ -177,21 +178,21 @@ const data = [
 
 
       articleContainer.classList.toggle('article-open')
-
-      if(mainButtonSpan.textContent === '\u25bc')
+      
+      if(mainButtonSpan.textContent === 'Click to Expand')
       {
 
-        mainButtonSpan.textContent = '\u25b2'
+        gsap.fromTo(event.target.parentNode, {height:50}, {height:400})
+        mainButtonSpan.textContent = 'Click to Close'
 
       }
       else{
 
-        mainButtonSpan.textContent = '\u25bc'
+        gsap.fromTo(event.target.parentNode, {height:400}, {height:50})
+        mainButtonSpan.textContent = 'Click to Expand'
 
       }
       
-
-
 
     })
     /*

@@ -57,7 +57,7 @@ function createMenuComp(menuArr){
 
   })
 /*
-  Step 5: return the menu component.
+  Step 5: return the menu component
 */
 
   return menuContainer
