@@ -85,6 +85,42 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'Brand New Article #1', 
+    date: 'Jan 19th, 2019', 
+    firstParagraph: 'Here is a sample ParagraphOne. Here is a sample ParagraphOne. Here is a sample ParagraphOne. Here is a sample ParagraphOne. Here is a sample ParagraphOne. Here is a sample ParagraphOne. Here is a sample ParagraphOne. Here is a sample ParagraphOne. Here is a sample ParagraphOne. Here is a sample ParagraphOne. Here is a sample ParagraphOne. Here is a sample ParagraphOne. Here is a sample ParagraphOne.', 
+
+    secondParagraph: 'Here is a sample ParagraphTwo. Here is a sample ParagraphTwo. Here is a sample ParagraphTwo. Here is a sample ParagraphTwo. Here is a sample ParagraphTwo. Here is a sample ParagraphTwo. Here is a sample ParagraphTwo. Here is a sample ParagraphTwo. Here is a sample ParagraphTwo. Here is a sample ParagraphTwo. Here is a sample ParagraphTwo. Here is a sample ParagraphTwo. Here is a sample ParagraphTwo.', 
+
+    thirdParagraph: 'Here is a sample ParagraphThree. Here is a sample ParagraphThree. Here is a sample ParagraphThree. Here is a sample ParagraphThree. Here is a sample ParagraphThree. Here is a sample ParagraphThree. Here is a sample ParagraphThree. Here is a sample ParagraphThree. Here is a sample ParagraphThree. Here is a sample ParagraphThree. Here is a sample ParagraphThree. Here is a sample ParagraphThree.'
+  },
+  {
+    title: 'Brand New Article #2', 
+    date: 'June 5th, 2019', 
+    firstParagraph: 'Here is a sample ParagraphOne. Here is a sample ParagraphOne. Here is a sample ParagraphOne. Here is a sample ParagraphOne. Here is a sample ParagraphOne. Here is a sample ParagraphOne. Here is a sample ParagraphOne. Here is a sample ParagraphOne. Here is a sample ParagraphOne. Here is a sample ParagraphOne. Here is a sample ParagraphOne. Here is a sample ParagraphOne. Here is a sample ParagraphOne.', 
+
+    secondParagraph: 'Here is a sample ParagraphTwo. Here is a sample ParagraphTwo. Here is a sample ParagraphTwo. Here is a sample ParagraphTwo. Here is a sample ParagraphTwo. Here is a sample ParagraphTwo. Here is a sample ParagraphTwo. Here is a sample ParagraphTwo. Here is a sample ParagraphTwo. Here is a sample ParagraphTwo. Here is a sample ParagraphTwo. Here is a sample ParagraphTwo. Here is a sample ParagraphTwo.',
+
+    thirdParagraph: 'Here is a sample ParagraphThree. Here is a sample ParagraphThree. Here is a sample ParagraphThree. Here is a sample ParagraphThree. Here is a sample ParagraphThree. Here is a sample ParagraphThree. Here is a sample ParagraphThree. Here is a sample ParagraphThree. Here is a sample ParagraphThree. Here is a sample ParagraphThree. Here is a sample ParagraphThree. Here is a sample ParagraphThree.'
+  },
+  {
+    title: 'Brand New Article #3', 
+    date: 'July 4th, 2019', 
+    firstParagraph: 'Here is a sample ParagraphOne. Here is a sample ParagraphOne. Here is a sample ParagraphOne. Here is a sample ParagraphOne. Here is a sample ParagraphOne. Here is a sample ParagraphOne. Here is a sample ParagraphOne. Here is a sample ParagraphOne. Here is a sample ParagraphOne. Here is a sample ParagraphOne. Here is a sample ParagraphOne. Here is a sample ParagraphOne. Here is a sample ParagraphOne.', 
+
+    secondParagraph: 'Here is a sample ParagraphTwo. Here is a sample ParagraphTwo. Here is a sample ParagraphTwo. Here is a sample ParagraphTwo. Here is a sample ParagraphTwo. Here is a sample ParagraphTwo. Here is a sample ParagraphTwo. Here is a sample ParagraphTwo. Here is a sample ParagraphTwo. Here is a sample ParagraphTwo. Here is a sample ParagraphTwo. Here is a sample ParagraphTwo. Here is a sample ParagraphTwo.', 
+
+    thirdParagraph: 'Here is a sample ParagraphThree. Here is a sample ParagraphThree. Here is a sample ParagraphThree. Here is a sample ParagraphThree. Here is a sample ParagraphThree. Here is a sample ParagraphThree. Here is a sample ParagraphThree. Here is a sample ParagraphThree. Here is a sample ParagraphThree. Here is a sample ParagraphThree. Here is a sample ParagraphThree. Here is a sample ParagraphThree.'
+  },
+  {
+    title: 'Brand New Article #4', 
+    date: 'Aug 13th, 2019', 
+    firstParagraph: 'Here is a sample ParagraphOne. Here is a sample ParagraphOne. Here is a sample ParagraphOne. Here is a sample ParagraphOne. Here is a sample ParagraphOne. Here is a sample ParagraphOne. Here is a sample ParagraphOne. Here is a sample ParagraphOne. Here is a sample ParagraphOne. Here is a sample ParagraphOne. Here is a sample ParagraphOne. Here is a sample ParagraphOne. Here is a sample ParagraphOne.', 
+
+    secondParagraph: 'Here is a sample ParagraphTwo. Here is a sample ParagraphTwo. Here is a sample ParagraphTwo. Here is a sample ParagraphTwo. Here is a sample ParagraphTwo. Here is a sample ParagraphTwo. Here is a sample ParagraphTwo. Here is a sample ParagraphTwo. Here is a sample ParagraphTwo. Here is a sample ParagraphTwo. Here is a sample ParagraphTwo. Here is a sample ParagraphTwo. Here is a sample ParagraphTwo.', 
+
+    thirdParagraph: 'Here is a sample ParagraphThree. Here is a sample ParagraphThree. Here is a sample ParagraphThree. Here is a sample ParagraphThree. Here is a sample ParagraphThree. Here is a sample ParagraphThree. Here is a sample ParagraphThree. Here is a sample ParagraphThree. Here is a sample ParagraphThree. Here is a sample ParagraphThree. Here is a sample ParagraphThree. Here is a sample ParagraphThree.'
   }
 ];
 
@@ -102,13 +138,106 @@ const data = [
   Hint: You will need to use createElement more than once here!
 
   Your function should take either an object as it's one argument, or 5 separate arguments mapping to each piece of the data object above.
+  */
+  
+  function createArticleElement(object){
 
+    const articleContainer = document.createElement('div')
+    const articleHeader = document.createElement('h2')
+    const articleDate = document.createElement('p')
+    const articleParaOne = document.createElement('p')
+    const articleParaTwo = document.createElement('p')
+    const articleParaThree = document.createElement('p')
+    const mainButtonSpan = document.createElement('span')
+
+    articleContainer.appendChild(articleHeader)
+    articleContainer.appendChild(articleDate)
+    articleContainer.appendChild(articleParaOne)
+    articleContainer.appendChild(articleParaTwo)
+    articleContainer.appendChild(articleParaThree)
+    articleContainer.appendChild(mainButtonSpan)
+
+    articleContainer.classList.add('article')
+    articleDate.classList.add('date')
+    mainButtonSpan.classList.add('expandButton')
+    
+
+    articleHeader.textContent = object.title
+    articleDate.textContent = object.date
+    articleParaOne.textContent = object.firstParagraph
+    articleParaTwo.textContent = object.secondParagraph
+    articleParaThree.textContent = object.thirdParagraph
+
+    mainButtonSpan.textContent = 'Click to Expand';
+
+    /*
   Step 2: Add an event listener to the expandButton span. This event listener should toggle the class 'article-open' on the 'article' div.
+*/
 
-  Step 3: return the entire component.
+    mainButtonSpan.addEventListener('click', (event) => {
 
+
+      articleContainer.classList.toggle('article-open')
+      
+      if(mainButtonSpan.textContent === 'Click to Expand')
+      {
+
+        gsap.fromTo(event.target.parentNode, {height:50}, {height:400})
+        mainButtonSpan.textContent = 'Click to Close'
+
+      }
+      else{
+
+        gsap.fromTo(event.target.parentNode, {height:400}, {height:50})
+        mainButtonSpan.textContent = 'Click to Expand'
+
+      }
+      
+
+    })
+    /*
+    Step 3: return the entire component.
+    */
+
+    return articleContainer;
+
+
+  }
+
+/*
   Step 4: Map over the data, creating a component for each oject and add each component to the DOM as children of the 'articles' div.
+*/
+
+let articleArray = data.map((data) => {
+
+  
+    return createArticleElement(data)
+
+
+})
+
+let articleLoc = document.querySelector('.articles')
+
+articleArray.forEach((articleElement) => {
+
+  articleLoc.appendChild(articleElement)
+
+})
+
+/*
 
   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
 
 */
+
+
+
+
+
+
+
+
+
+
+
+
